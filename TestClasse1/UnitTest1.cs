@@ -61,7 +61,7 @@ namespace TestClasse1
             int[] i = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9};
             lotto = new Lotto.Lotto("012", "12/11/05", i, 9, 0);
             int[] j = new int[] { 1, 2, 3, 4, 5 };
-            Assert.True(lotto.VerificaEstrazioni(j,4)==4);
+            Assert.True(lotto.VerificaEstrazioni(j,5)==5);
         }
         [Fact]
         public void Test7()
@@ -70,6 +70,14 @@ namespace TestClasse1
             lotto = new Lotto.Lotto("012", "12/11/05", i, 9, 0);
             int[] j = new int[] { 1, 2, 3, 4, 5 };
             Assert.Throws<Exception>(() => lotto.VerificaEstrazioni(j,7));
+        }
+        [Fact]
+        public void Test9()
+        {
+            int[] i = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            lotto = new Lotto.Lotto("012", "12/11/05", i, 9, 0);
+            int[] j = new int[] { 1, 2, 3};
+            Assert.Throws<Exception>(() => lotto.VerificaEstrazioni(j, 5));
         }
         [Fact]
         public void Test8()

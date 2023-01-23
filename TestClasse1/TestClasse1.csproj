@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <Reference Include="Lotto">
-      <HintPath>..\GitMacchina\MacchinaLotto\Esperia.Lotto\Lotto\bin\Debug\net5.0\Lotto.dll</HintPath>
+      <HintPath>..\..\MacchinaLotto\Esperia.Lotto\Lotto\bin\Debug\net5.0\Lotto.dll</HintPath>
     </Reference>
   </ItemGroup>
 
